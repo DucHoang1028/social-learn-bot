@@ -4,9 +4,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ContentSection } from "@/components/ContentSection";
 import { Quiz } from "@/components/Quiz";
 import { ChatBot } from "@/components/ChatBot";
-import { BookOpen, GraduationCap, MessageCircle } from "lucide-react";
+import { BookOpen, GraduationCap } from "lucide-react";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState("content");
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -25,13 +27,13 @@ const Index = () => {
               Liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội
             </p>
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Button size="lg" className="shadow-lg hover:shadow-xl transition-all">
-                <BookOpen className="mr-2 h-5 w-5" />
+              <Button 
+                size="lg" 
+                className="shadow-lg hover:shadow-xl transition-all"
+                onClick={() => setActiveTab("quiz")}
+              >
+                <GraduationCap className="mr-2 h-5 w-5" />
                 Bắt Đầu Học
-              </Button>
-              <Button size="lg" variant="outline" className="shadow-lg hover:shadow-xl transition-all">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Hỏi AI
               </Button>
             </div>
           </div>
@@ -40,7 +42,7 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
-        <Tabs defaultValue="content" className="max-w-6xl mx-auto">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
           <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="content" className="text-lg">
               <BookOpen className="mr-2 h-5 w-5" />
