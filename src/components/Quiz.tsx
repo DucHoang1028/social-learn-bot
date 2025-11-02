@@ -265,10 +265,9 @@ export const Quiz = () => {
           </Button>
         )}
 
-        {/* Hint Display */}
         {showHint && !showFeedback && (
           <div className="mb-4 p-4 bg-accent/10 border-l-4 border-accent rounded">
-            <p className="text-sm text-accent-foreground">
+            <p className="text-sm text-foreground">
               <strong>💡 Gợi ý:</strong> {question.hint}
             </p>
           </div>
@@ -288,13 +287,12 @@ export const Quiz = () => {
               return (
                 <div
                   key={idx}
-                  className={`flex items-center space-x-2 ${
-                    showCorrectAnswer
+                  className={`flex items-center space-x-2 ${showCorrectAnswer
                       ? "bg-green-50 border-green-500"
                       : showWrongAnswer
-                      ? "bg-red-50 border-red-500"
-                      : ""
-                  } rounded-lg border-2 transition-all`}
+                        ? "bg-red-50 border-red-500"
+                        : ""
+                    } rounded-lg border-2 transition-all`}
                 >
                   <RadioGroupItem
                     value={idx.toString()}
@@ -304,9 +302,8 @@ export const Quiz = () => {
                   />
                   <Label
                     htmlFor={`option-${idx}`}
-                    className={`flex-1 cursor-pointer p-3 flex items-center gap-2 ${
-                      showFeedback ? "cursor-not-allowed" : ""
-                    }`}
+                    className={`flex-1 cursor-pointer p-3 flex items-center gap-2 ${showFeedback ? "cursor-not-allowed" : ""
+                      }`}
                   >
                     {option}
                     {showCorrectAnswer && <CheckCircle2 className="h-5 w-5 text-green-600" />}
@@ -321,11 +318,10 @@ export const Quiz = () => {
         {/* Feedback */}
         {showFeedback && (
           <div
-            className={`mt-4 p-4 rounded-lg ${
-              selectedAnswer === question.correct
+            className={`mt-4 p-4 rounded-lg ${selectedAnswer === question.correct
                 ? "bg-green-50 border-l-4 border-green-500"
                 : "bg-red-50 border-l-4 border-red-500"
-            }`}
+              }`}
           >
             <p className="font-semibold">
               {selectedAnswer === question.correct ? "✅ Chính xác!" : "❌ Chưa đúng!"}
@@ -346,9 +342,8 @@ export const Quiz = () => {
           {questions.map((_, idx) => (
             <div
               key={idx}
-              className={`h-2 w-8 rounded-full transition-colors ${
-                idx === currentQuestion ? "bg-primary" : idx < currentQuestion ? "bg-secondary" : "bg-muted"
-              }`}
+              className={`h-2 w-8 rounded-full transition-colors ${idx === currentQuestion ? "bg-primary" : idx < currentQuestion ? "bg-secondary" : "bg-muted"
+                }`}
             />
           ))}
         </div>
