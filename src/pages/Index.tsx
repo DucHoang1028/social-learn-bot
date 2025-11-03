@@ -13,9 +13,9 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("content");
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       {/* Hero Section */}
-      <header className="relative overflow-hidden">
+      <header className="relative overflow-hidden w-full">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent opacity-10" />
         
         {/* Background Images Grid */}
@@ -27,24 +27,24 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-16 relative">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 relative w-full max-w-[100vw]">
+          <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-4">
               <GraduationCap className="h-4 w-4" />
               Lý Luận Chính Trị
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-              Chương 5: Cơ cấu xã hội - giai cấp
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight px-2 break-words">
+              Cơ cấu xã hội - giai cấp
             </h1>
-            <div className="relative inline-block">
-              <p className="text-xl md:text-2xl text-muted-foreground pb-3">
+            <div className="relative inline-block max-w-full px-2">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground pb-3 break-words">
                 Liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội
               </p>
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
             </div>
 
             {/* Decorative Images */}
-            <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto pt-8 pb-4">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto pt-6 sm:pt-8 pb-4 px-2">
               <div className="rounded-lg overflow-hidden shadow-lg border-2 border-primary/20 hover:border-primary/40 transition-all">
                 <img src={templeImg} alt="Di sản văn hóa Việt Nam" className="w-full h-32 object-cover" />
               </div>
@@ -71,8 +71,8 @@ const Index = () => {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full max-w-[100vw]">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto w-full">
           <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="content" className="text-lg">
               <BookOpen className="mr-2 h-5 w-5" />
@@ -98,9 +98,9 @@ const Index = () => {
       <ChatBot />
 
       {/* Footer */}
-      <footer className="border-t mt-16 py-8 bg-muted/30">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>Tài liệu học tập về lý luận chính trị - Chương 5</p>
+      <footer className="border-t mt-12 sm:mt-16 py-6 sm:py-8 bg-muted/30 w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-foreground max-w-[100vw]">
+          <p className="text-sm sm:text-base break-words">Tài liệu học tập về lý luận chính trị</p>
         </div>
       </footer>
     </div>

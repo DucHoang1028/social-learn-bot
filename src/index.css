@@ -103,7 +103,35 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Hide Lovable "Edit with Lovable" button if injected */
+  [data-lovable],
+  [data-lovable-button],
+  iframe[src*="lovable"],
+  .lovable-button,
+  a[href*="lovable.dev"][target="_blank"]:has-text("Edit with"),
+  /* Generic selector for Lovable button */
+  body > div:last-child > div[style*="position: fixed"],
+  body > div:last-child > div[style*="bottom"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 }
