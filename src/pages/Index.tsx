@@ -5,6 +5,9 @@ import { ContentSection } from "@/components/ContentSection";
 import { Quiz } from "@/components/Quiz";
 import { ChatBot } from "@/components/ChatBot";
 import { BookOpen, GraduationCap } from "lucide-react";
+import templeImg from "@/assets/vietnam-temple.jpg";
+import cultureImg from "@/assets/vietnam-culture.jpg";
+import heritageImg from "@/assets/vietnam-heritage.jpg";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("content");
@@ -14,6 +17,16 @@ const Index = () => {
       {/* Hero Section */}
       <header className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent opacity-10" />
+        
+        {/* Background Images Grid */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="grid grid-cols-3 h-full">
+            <img src={templeImg} alt="" className="w-full h-full object-cover" />
+            <img src={cultureImg} alt="" className="w-full h-full object-cover" />
+            <img src={heritageImg} alt="" className="w-full h-full object-cover" />
+          </div>
+        </div>
+
         <div className="container mx-auto px-4 py-16 relative">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-4">
@@ -23,9 +36,26 @@ const Index = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
               Chương 5: Cơ cấu xã hội - giai cấp
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội
-            </p>
+            <div className="relative inline-block">
+              <p className="text-xl md:text-2xl text-muted-foreground pb-3">
+                Liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên chủ nghĩa xã hội
+              </p>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-primary to-transparent rounded-full" />
+            </div>
+
+            {/* Decorative Images */}
+            <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto pt-8 pb-4">
+              <div className="rounded-lg overflow-hidden shadow-lg border-2 border-primary/20 hover:border-primary/40 transition-all">
+                <img src={templeImg} alt="Di sản văn hóa Việt Nam" className="w-full h-32 object-cover" />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg border-2 border-secondary/20 hover:border-secondary/40 transition-all">
+                <img src={cultureImg} alt="Văn hóa truyền thống" className="w-full h-32 object-cover" />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg border-2 border-accent/20 hover:border-accent/40 transition-all">
+                <img src={heritageImg} alt="Kiến trúc lịch sử" className="w-full h-32 object-cover" />
+              </div>
+            </div>
+
             <div className="flex flex-wrap gap-4 justify-center pt-4">
               <Button 
                 size="lg" 
