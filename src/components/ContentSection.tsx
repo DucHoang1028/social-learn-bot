@@ -1,5 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Users, TrendingUp } from "lucide-react";
+import factoryWorkersImg from "@/assets/factory-workers.jpg";
+import farmersImg from "@/assets/farmers-rice-terraces.jpg";
+import studentsImg from "@/assets/students-learning.jpg";
+import teamworkImg from "@/assets/teamwork-cooperation.jpg";
+import communityImg from "@/assets/community-unity.jpg";
 
 export const ContentSection = () => {
   return (
@@ -31,7 +36,12 @@ export const ContentSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-md hover:shadow-lg transition-shadow">
+          <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <img 
+              src={factoryWorkersImg} 
+              alt="Công nhân làm việc tại nhà máy" 
+              className="w-full h-48 object-cover"
+            />
             <CardHeader>
               <CardTitle className="text-xl">2. Giai cấp công nhân</CardTitle>
             </CardHeader>
@@ -50,7 +60,12 @@ export const ContentSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-md hover:shadow-lg transition-shadow">
+          <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <img 
+              src={farmersImg} 
+              alt="Nông dân làm việc trên ruộng bậc thang" 
+              className="w-full h-48 object-cover"
+            />
             <CardHeader>
               <CardTitle className="text-xl">3. Giai cấp nông dân</CardTitle>
             </CardHeader>
@@ -69,7 +84,12 @@ export const ContentSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-md hover:shadow-lg transition-shadow">
+          <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <img 
+              src={studentsImg} 
+              alt="Sinh viên học tập và nghiên cứu" 
+              className="w-full h-48 object-cover"
+            />
             <CardHeader>
               <CardTitle className="text-xl">4. Tầng lớp trí thức</CardTitle>
             </CardHeader>
@@ -97,7 +117,12 @@ export const ContentSection = () => {
         </h2>
 
         <div className="grid gap-6">
-          <Card className="shadow-md hover:shadow-lg transition-shadow">
+          <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <img 
+              src={teamworkImg} 
+              alt="Mọi người làm việc cùng nhau, đoàn kết hợp tác" 
+              className="w-full h-56 object-cover"
+            />
             <CardHeader>
               <CardTitle className="text-xl flex items-center gap-2">
                 <TrendingUp className="h-6 w-6" />
@@ -121,7 +146,12 @@ export const ContentSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-md hover:shadow-lg transition-shadow">
+          <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <img 
+              src={communityImg} 
+              alt="Cộng đồng đoàn kết, liên minh giai cấp" 
+              className="w-full h-56 object-cover"
+            />
             <CardHeader>
               <CardTitle className="text-xl">2. Liên minh công nhân - nông dân</CardTitle>
             </CardHeader>
