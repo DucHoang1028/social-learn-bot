@@ -189,14 +189,14 @@ export const Quiz = () => {
 
   if (!quizStarted) {
     return (
-      <Card className="max-w-2xl mx-auto shadow-lg w-full">
+      <Card className="max-w-2xl mx-auto shadow-lg">
         <CardHeader className="bg-gradient-to-r from-primary to-secondary text-white">
-          <CardTitle className="text-xl sm:text-2xl flex items-center gap-2 break-words">
-            <Settings className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
-            <span>Cài Đặt Bài Kiểm Tra</span>
+          <CardTitle className="text-2xl flex items-center gap-2">
+            <Settings className="h-6 w-6" />
+            Cài Đặt Bài Kiểm Tra
           </CardTitle>
         </CardHeader>
-        <CardContent className="p-4 sm:p-6 space-y-4 sm:space-y-6">
+        <CardContent className="p-6 space-y-6">
           <div className="space-y-3">
             <Label htmlFor="numQuestions" className="text-lg font-semibold">
               Số lượng câu hỏi (tối đa 20)
@@ -225,14 +225,14 @@ export const Quiz = () => {
   if (showResult) {
     const percentage = (score / questions.length) * 100;
     return (
-      <Card className="max-w-2xl mx-auto shadow-lg w-full">
+      <Card className="max-w-2xl mx-auto shadow-lg">
         <CardHeader className="bg-gradient-to-r from-primary to-secondary text-white">
-          <CardTitle className="text-xl sm:text-2xl break-words">Kết Quả</CardTitle>
+          <CardTitle className="text-2xl">Kết Quả</CardTitle>
         </CardHeader>
-        <CardContent className="p-4 sm:p-6 text-center">
+        <CardContent className="p-6 text-center">
           <div className="mb-6">
-            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-2 break-words">{percentage.toFixed(0)}%</div>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground break-words px-2">
+            <div className="text-6xl font-bold text-primary mb-2">{percentage.toFixed(0)}%</div>
+            <p className="text-xl text-muted-foreground">
               Bạn đã trả lời đúng {score}/{questions.length} câu hỏi
             </p>
           </div>
@@ -247,14 +247,14 @@ export const Quiz = () => {
   const question = questions[currentQuestion];
 
   return (
-    <Card className="max-w-2xl mx-auto shadow-lg w-full">
+    <Card className="max-w-2xl mx-auto shadow-lg">
       <CardHeader className="bg-gradient-to-r from-primary to-secondary text-white">
-        <CardTitle className="text-lg sm:text-xl break-words">
+        <CardTitle className="text-xl">
           Câu {currentQuestion + 1} / {questions.length}
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-4 sm:p-6">
-        <h3 className="text-base sm:text-lg font-semibold mb-4 break-words">{question.question}</h3>
+      <CardContent className="p-6">
+        <h3 className="text-lg font-semibold mb-4">{question.question}</h3>
 
         {/* Hint Button */}
         {!showFeedback && (
@@ -306,12 +306,12 @@ export const Quiz = () => {
                   />
                   <Label
                     htmlFor={`option-${idx}`}
-                    className={`flex-1 cursor-pointer p-2 sm:p-3 flex items-center gap-2 break-words text-sm sm:text-base ${showFeedback ? "cursor-not-allowed" : ""
+                    className={`flex-1 cursor-pointer p-3 flex items-center gap-2 ${showFeedback ? "cursor-not-allowed" : ""
                       }`}
                   >
-                    <span className="flex-1">{option}</span>
-                    {showCorrectAnswer && <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0" />}
-                    {showWrongAnswer && <XCircle className="h-4 w-4 sm:h-5 sm:w-5 text-red-600 flex-shrink-0" />}
+                    {option}
+                    {showCorrectAnswer && <CheckCircle2 className="h-5 w-5 text-green-600" />}
+                    {showWrongAnswer && <XCircle className="h-5 w-5 text-red-600" />}
                   </Label>
                 </div>
               );

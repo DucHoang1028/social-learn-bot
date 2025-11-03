@@ -9,15 +9,15 @@ import communityImg from "@/assets/community-unity.jpg";
 
 export const ContentSection = () => {
   return (
-    <div className="space-y-6 sm:space-y-8 w-full overflow-x-hidden">
+    <div className="space-y-8">
       {/* Part I */}
-      <section className="w-full">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-primary flex items-center gap-2 sm:gap-3 break-words">
-          <BookOpen className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
-          <span>I. Cơ cấu xã hội - giai cấp trong thời kỳ quá độ</span>
+      <section>
+        <h2 className="text-3xl font-bold mb-6 text-primary flex items-center gap-3">
+          <BookOpen className="h-8 w-8" />
+          I. Cơ cấu xã hội - giai cấp trong thời kỳ quá độ
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 w-full">
+        <div className="grid md:grid-cols-2 gap-6">
           <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
             <img 
               src={socialStructureImg} 
@@ -25,9 +25,9 @@ export const ContentSection = () => {
               className="w-full h-48 object-cover"
             />
             <CardHeader>
-              <CardTitle className="text-lg sm:text-xl break-words">1. Khái niệm cơ cấu xã hội</CardTitle>
+              <CardTitle className="text-xl">1. Khái niệm cơ cấu xã hội</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-muted-foreground text-sm sm:text-base">
+            <CardContent className="space-y-3 text-muted-foreground">
               <p>
                 Cơ cấu xã hội là tổng thể các giai cấp, tầng lớp xã hội và mối quan hệ giữa chúng 
                 trong một xã hội nhất định, được hình thành trên cơ sở phương thức sản xuất.
@@ -49,9 +49,9 @@ export const ContentSection = () => {
               className="w-full h-48 object-cover"
             />
             <CardHeader>
-              <CardTitle className="text-lg sm:text-xl break-words">2. Giai cấp công nhân</CardTitle>
+              <CardTitle className="text-xl">2. Giai cấp công nhân</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-muted-foreground text-sm sm:text-base">
+            <CardContent className="space-y-3 text-muted-foreground">
               <p className="font-semibold text-foreground">Vai trò lãnh đạo:</p>
               <ul className="list-disc list-inside space-y-1 pl-4">
                 <li>Giai cấp tiên tiến nhất, gắn liền với lợi ích chung của xã hội</li>
@@ -73,9 +73,9 @@ export const ContentSection = () => {
               className="w-full h-48 object-cover"
             />
             <CardHeader>
-              <CardTitle className="text-lg sm:text-xl break-words">3. Giai cấp nông dân</CardTitle>
+              <CardTitle className="text-xl">3. Giai cấp nông dân</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-muted-foreground text-sm sm:text-base">
+            <CardContent className="space-y-3 text-muted-foreground">
               <p>
                 Giai cấp nông dân là lực lượng đồng minh chiến lược quan trọng nhất của 
                 giai cấp công nhân trong thời kỳ quá độ.
@@ -97,9 +97,9 @@ export const ContentSection = () => {
               className="w-full h-48 object-cover"
             />
             <CardHeader>
-              <CardTitle className="text-lg sm:text-xl break-words">4. Tầng lớp trí thức</CardTitle>
+              <CardTitle className="text-xl">4. Tầng lớp trí thức</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-muted-foreground text-sm sm:text-base">
+            <CardContent className="space-y-3 text-muted-foreground">
               <p>
                 Tầng lớp trí thức không phải là một giai cấp độc lập mà gắn bó với các giai cấp khác.
               </p>
@@ -116,13 +116,13 @@ export const ContentSection = () => {
       </section>
 
       {/* Part II */}
-      <section className="w-full">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-secondary flex items-center gap-2 sm:gap-3 break-words">
-          <Users className="h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
-          <span>II. Liên minh giai cấp, tầng lớp</span>
+      <section>
+        <h2 className="text-3xl font-bold mb-6 text-secondary flex items-center gap-3">
+          <Users className="h-8 w-8" />
+          II. Liên minh giai cấp, tầng lớp
         </h2>
 
-        <div className="grid gap-4 sm:gap-6 w-full">
+        <div className="grid gap-6">
           <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
             <img 
               src={teamworkImg} 
@@ -130,12 +130,12 @@ export const ContentSection = () => {
               className="w-full h-56 object-cover"
             />
             <CardHeader>
-              <CardTitle className="text-lg sm:text-xl flex items-center gap-2 break-words">
-                <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
-                <span>1. Tầm quan trọng của liên minh giai cấp</span>
+              <CardTitle className="text-xl flex items-center gap-2">
+                <TrendingUp className="h-6 w-6" />
+                1. Tầm quan trọng của liên minh giai cấp
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-muted-foreground text-sm sm:text-base">
+            <CardContent className="space-y-3 text-muted-foreground">
               <p>
                 Liên minh giai cấp là sự liên kết, đoàn kết giữa các giai cấp, tầng lớp có lợi ích 
                 chung trong xã hội để cùng nhau xây dựng chủ nghĩa xã hội.
@@ -159,9 +159,9 @@ export const ContentSection = () => {
               className="w-full h-56 object-cover"
             />
             <CardHeader>
-              <CardTitle className="text-lg sm:text-xl break-words">2. Liên minh công nhân - nông dân</CardTitle>
+              <CardTitle className="text-xl">2. Liên minh công nhân - nông dân</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-3 text-muted-foreground text-sm sm:text-base">
+            <CardContent className="space-y-3 text-muted-foreground">
               <p className="font-semibold text-foreground">
                 Đây là liên minh cơ bản nhất, chiến lược nhất trong xã hội Việt Nam:
               </p>
@@ -192,9 +192,9 @@ export const ContentSection = () => {
 
           <Card className="shadow-md hover:shadow-lg transition-shadow">
             <CardHeader>
-              <CardTitle className="text-lg sm:text-xl break-words">3. Vai trò của các tầng lớp khác</CardTitle>
+              <CardTitle className="text-xl">3. Vai trò của các tầng lớp khác</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-muted-foreground text-sm sm:text-base">
+            <CardContent className="space-y-4 text-muted-foreground">
               <div>
                 <p className="font-semibold text-foreground">Tầng lớp trí thức:</p>
                 <p>Đóng vai trò cầu nối, chuyển giao tri thức, góp phần nâng cao dân trí và phát triển khoa học công nghệ.</p>

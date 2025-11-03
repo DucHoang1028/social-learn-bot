@@ -118,7 +118,7 @@ export const ChatBot = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-[calc(100vw-2rem)] sm:w-96 max-w-[calc(100vw-2rem)] sm:max-w-md h-[calc(100vh-8rem)] sm:h-[600px] max-h-[calc(100vh-8rem)] flex flex-col shadow-2xl border-2 border-primary/20 z-50">
+        <Card className="fixed bottom-6 right-6 w-96 h-[600px] flex flex-col shadow-2xl border-2 border-primary/20">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b bg-primary text-primary-foreground rounded-t-lg">
             <div className="flex items-center gap-2">
