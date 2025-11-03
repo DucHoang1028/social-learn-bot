@@ -153,11 +153,15 @@ export const Quiz = () => {
     setShowHint(false);
   };
 
-  const handleAnswer = (answerIndex: number) => {
+  const handleSelectAnswer = (answerIndex: number) => {
     if (showFeedback) return;
     setSelectedAnswer(answerIndex);
+  };
+
+  const handleSubmit = () => {
+    if (selectedAnswer === null || showFeedback) return;
     setShowFeedback(true);
-    if (answerIndex === questions[currentQuestion].correct) {
+    if (selectedAnswer === questions[currentQuestion].correct) {
       setScore(score + 1);
     }
   };
@@ -274,8 +278,8 @@ export const Quiz = () => {
         )}
 
         <RadioGroup
-          value={selectedAnswer?.toString()}
-          onValueChange={(val) => !showFeedback && handleAnswer(Number(val))}
+          value={selectedAnswer !== null ? selectedAnswer.toString() : ""}
+          onValueChange={(val) => !showFeedback && handleSelectAnswer(Number(val))}
         >
           <div className="space-y-3">
             {question.options.map((option, idx) => {
@@ -314,6 +318,18 @@ export const Quiz = () => {
             })}
           </div>
         </RadioGroup>
+
+        {/* Submit Button */}
+        {!showFeedback && (
+          <Button 
+            onClick={handleSubmit} 
+            disabled={selectedAnswer === null}
+            className="w-full mt-4"
+            size="lg"
+          >
+            Xác nhận
+          </Button>
+        )}
 
         {/* Feedback */}
         {showFeedback && (
