@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Users, TrendingUp } from "lucide-react";
+import socialStructureImg from "@/assets/social-structure.jpg";
 import factoryWorkersImg from "@/assets/factory-workers.jpg";
 import farmersImg from "@/assets/farmers-rice-terraces.jpg";
 import studentsImg from "@/assets/students-learning.jpg";
@@ -17,7 +18,12 @@ export const ContentSection = () => {
         </h2>
         
         <div className="grid md:grid-cols-2 gap-6">
-          <Card className="shadow-md hover:shadow-lg transition-shadow">
+          <Card className="shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+            <img 
+              src={socialStructureImg} 
+              alt="Cơ cấu xã hội và mối quan hệ giữa các tầng lớp" 
+              className="w-full h-48 object-cover"
+            />
             <CardHeader>
               <CardTitle className="text-xl">1. Khái niệm cơ cấu xã hội</CardTitle>
             </CardHeader>
